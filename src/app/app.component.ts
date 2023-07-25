@@ -10,7 +10,7 @@ export class AppComponent implements AfterViewInit {
   title = 'angularYoutube';
   parentMessage = 'msg comming from parent component';
   message = '';
-  fromChildOutput = ''
+  fromChildOutput = '';
 
   flag: boolean = false;
 
@@ -27,5 +27,8 @@ export class AppComponent implements AfterViewInit {
 
   receiveMessage($event: any) {
     this.fromChildOutput = $event;
+  }
+  buttonClick() {
+    console.log('button clicking is working fine');
   }
 }
