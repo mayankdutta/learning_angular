@@ -44,4 +44,7 @@ export class AppComponent implements AfterViewInit {
   onKeyupFilter() {
     console.log('filter: enter key pressed');
   }
+  handleName(name: string) {
+    console.log(`you pressed ${name}`)
+  }
 }

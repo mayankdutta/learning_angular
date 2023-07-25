@@ -15,10 +15,22 @@
 <button (click)="buttonClick()">button for testing Event binding</button>
 <!-- for normal binding we use [], but for event binding we use ()-->
 
+<br />
+<input placeholder="testing on keyup" type="text" (keyup)="onKeyup()" />
+<br />
+<input
+  placeholder="keyup only on pressing enter"
+  type="text"
+  (keyup)="onKeyupEnter($event)"
+/>
+<br />
+<input
+  placeholder="keyup only on pressing enter"
+  type="text"
+  (keyup.enter)="onKeyupFilter()"
+/>
+<br />
 
-<br>
-<input placeholder='testing on keyup' type='text' (keyup)='onKeyup()'/>
-<br>
-<input placeholder='keyup only on pressing enter' type='text' (keyup)='onKeyupEnter($event)'/>
-<br>
-<input placeholder='keyup only on pressing enter' type='text' (keyup.enter)='onKeyupFilter()'/>
+
+<input placeholder="enter name" type="text" (keyup)="handleName(name.value)" #name />
+<!-- concept of template variable in angular -->
