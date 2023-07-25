@@ -31,4 +31,17 @@ export class AppComponent implements AfterViewInit {
   buttonClick() {
     console.log('button clicking is working fine');
   }
+
+  onKeyup() {
+    console.log('key up working fine');
+  }
+  onKeyupEnter($event: any) {
+    if ($event.keyCode == 13) {
+      console.log('enter key pressed');
+    }
+    // console.log($event);
+  }
+  onKeyupFilter() {
+    console.log('filter: enter key pressed');
+  }
 }
