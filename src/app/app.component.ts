@@ -9,7 +9,8 @@ import { PostComponent } from './post/post.component';
 export class AppComponent implements AfterViewInit {
   title = 'angularYoutube';
   parentMessage = 'msg comming from parent component';
-  message = "";
+  message = '';
+  fromChildOutput = ''
 
   @ViewChild(PostComponent) childComp: any;
 
@@ -20,5 +21,9 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log(this.childComp);
     this.message = this.childComp.childMessage;
+  }
+
+  receiveMessage($event: any) {
+    this.fromChildOutput = $event;
   }
 }
