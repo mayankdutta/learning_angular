@@ -1,5 +1,6 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { PostComponent } from './post/post.component';
+import { Task1Component } from './task1/task1.component';
 
 @Component({
   selector: 'app-root',
