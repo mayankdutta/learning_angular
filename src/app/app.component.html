@@ -2,7 +2,12 @@
 <h1>Hello, World!</h1>
 
 <app-navbar></app-navbar>
-<app-post [fromParent]="parentMessage" (messageEvent)='receiveMessage($event)'></app-post>
+<app-post
+  [fromParent]="parentMessage"
+  (messageEvent)="receiveMessage($event)"
+></app-post>
 
-<h2>{{message}}</h2>
-<h3>Message from child: {{fromChildOutput}}</h3>
+<h2>{{ message }}</h2>
+<h3>Message from child: {{ fromChildOutput }}</h3>
+
+<h1 [style.color]="flag ? 'red' : 'blue'">Colours</h1>

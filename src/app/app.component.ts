@@ -12,6 +12,8 @@ export class AppComponent implements AfterViewInit {
   message = '';
   fromChildOutput = ''
 
+  flag: boolean = false;
+
   @ViewChild(PostComponent) childComp: any;
 
   constructor() {
