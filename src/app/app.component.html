@@ -31,6 +31,18 @@
 />
 <br />
 
-
-<input placeholder="enter name" type="text" (keyup)="handleName(name.value)" #name />
+<input
+  placeholder="enter name"
+  type="text"
+  (keyup)="handleName(name.value)"
+  #name
+/>
 <!-- concept of template variable in angular -->
+
+<!-- Two way data binding -->
+<input
+  placeholder="enter data"
+  type="text"
+  [(ngModel)]="userName"
+  (keyup)="handleData()"
+/>

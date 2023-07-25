@@ -47,4 +47,12 @@ export class AppComponent implements AfterViewInit {
   handleName(name: string) {
     console.log(`you pressed ${name}`)
   }
+
+
+  userName: string = '';
+
+  handleData() {
+    console.log(`user has typed ${this.userName}`)
+  }
+
 }

@@ -8,9 +8,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, PostComponent, PostListComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    PostComponent,
+    PostListComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
